@@ -1,0 +1,100 @@
+#print("Hello, World!")
+
+#game intro
+print("The game is about to start...")
+print("Buckle up...")
+print("...")
+print("...")
+print("...")
+print("Game On")
+print()        #blank line
+
+#get user name
+name = input("Hey, friend. What's your name? >")
+
+#explain game
+print()
+print("Hey, ",name.title(),"----Welcome to the Mars Adevnture Game.")
+print("You got a call from your friend at NASA yesterday.")
+print("You're going to Mars!")
+print()
+
+#ask user if they're excited
+print("Are you excited? Type Y or N")
+excited = input("> ")
+excited = excited.upper()
+
+if excited == "Y":
+  print("I knew you'd say that. Mars is awesome!")
+
+if excited == "N":
+  print("Well, you can't back out now. Sorry.")
+
+#getting ready
+print()
+print("It's time to pack!")
+
+#suitcases
+print("How many suitcases do you think you'll need?")
+num_suitcases = input("> ")      #string!
+
+num_suitcases = int(num_suitcases)   #integer conversion
+
+if num_suitcases > 2:
+  print("That's far too many!")
+  print("Please try to fit everything into 2 bags or less. Thanks!")
+
+if num_suitcases <= 2:
+  print ("Perfect! Everything should fit nicely.")
+
+#animal friend
+print()
+print("You're allowed to bring one companion animal with you.")  
+print("What kind of companion animal would you like to bring?")
+
+companion_type = input("> ")
+
+print("What is your companion's name?")
+
+companion_name = input("> ")
+
+print("Cool, so you're bringing",companion_name.title(), "the", companion_type, "!")
+
+#spaceship decor
+print()
+print("NASA has an interior designer offering to spruce up your ship!")
+print()
+print("Tell us your preferred style.")
+print("Would you like:")
+print("A. sleek and modern")
+print("B. ecclectic")
+print("C. glam lyfe")
+
+print()
+print("Please type A, B, or C, to make your selection.")
+decor_choice = input("> ")
+decor_choice = decor_choice.upper()
+if decor_choice == "A":
+    decor = "sleek"
+
+if decor_choice == "B":
+    decor = "kitschy"
+
+if decor_choice == "C":
+    decor = "glam"
+
+print()
+print("I can see it now.")
+print(name.title(), "and", companion_name.title(), "careening through space in a", decor, "spaceship!")
+print()
+
+#countdown and liftoff
+import time
+timer = 5
+
+while timer > 0:
+    print(timer, "...")
+    time.sleep(2)
+    timer = timer - 1
+
+print("*** LIFTOFF ***")
